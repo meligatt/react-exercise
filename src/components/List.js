@@ -1,10 +1,11 @@
+import './List.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
 import ListItem from './ListItem';
 
 const List = ({items, isFetching}) => {
   return (
-    <section>
+    <section className="list">
       { isFetching && <div>Loading results...</div> }
       
       { !isFetching && items.length > 0 && 

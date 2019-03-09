@@ -1,3 +1,4 @@
+import './Single.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -7,7 +8,7 @@ const Single = ({ item, image }) => {
   const descriptionLabel = `Description: ${item.description}`;
   
   return(
-    <div role="region">
+    <div role="region" className="single">
       <h1 aria-label={ priceLabel }>{ priceLabel }</h1>      
       <img src={image.medium} alt={image.title} />
       <div aria-label={ fullAddressLabel }>{ fullAddressLabel }</div>
