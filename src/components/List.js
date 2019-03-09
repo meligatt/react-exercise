@@ -1,17 +1,25 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import ListItem from './ListItem';
 
-const List = () => (
-  <ul style={{border:'1px solid green'}}>
-    {
-      [{id:1, title:'result 1'}, {id:2, title:'result 2'}].map(
-        (item) => <ListItem key={item.id}  item={item}/>
-      ) 
-    }
-  </ul>
-);
+const List = ({items, isFetching}) => {
+  return (
+    <div>
+      { isFetching && <div>is Fetching...</div> }
+    
+      { !isFetching && items.length > 0 && 
+      <ul>
+        { items.map(
+          (item) => <ListItem key={item.listingId}  item={item}/>
+        )
+        }
+      </ul>
+      }
+    
+      { !isFetching && items.length === 0 && <div>No results found...</div> }
+    </div>
+  );};
 
 List.propTypes = {
   results: PropTypes.arrayOf(

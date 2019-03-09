@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Single = ({ match }) => (
+const Single = ({ id }) => (
   <div>
     Single view
-    <h3>ID: {match.params.id}</h3>
+    <h3>ID: {id}</h3>
   </div>
 );
  
 Single.propTypes = {
-  match: PropTypes.object
+  id: PropTypes.string
 };
 
 export default Single;
