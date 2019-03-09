@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { fetchSingleProperty } from '../actions';
@@ -12,15 +12,20 @@ class SingleContainer extends Component {
     this.props.fetchSingleProperty(id);
   }
   render(){
-    const { item } = this.props;
+    const { item, image, isFetching } = this.props;
     return (
-      <Single item={ item }/>
+      <Fragment>
+        { isFetching && <div>Loading data...</div> }
+        { !isFetching && image && <Single item={ item } image={ image }/> } 
+      </Fragment>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  item: state.singleProperty.item
+  item: state.singleProperty.item,
+  image: state.singleProperty.image,
+  isFetching: state.singleProperty.isFetching
 });
 
 const mapDispatchToProps = dispatch => (

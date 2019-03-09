@@ -1,3 +1,4 @@
+// reducers: singleProperty
 const singleProperty = (state={}, action) => {
   switch (action.type) {
   case 'REQUEST_SINGLE_PROPERTY_LOADING':
@@ -7,6 +8,7 @@ const singleProperty = (state={}, action) => {
   case 'REQUEST_SINGLE_PROPERTY_SUCCESS':
     return Object.assign({}, state, {
       item: action.payload,
+      image: action.payload.images[0] || {},
       isFetching: false
     });
   case 'REQUEST_SINGLE_PROPERTY_FAILURE':

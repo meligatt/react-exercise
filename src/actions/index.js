@@ -16,6 +16,23 @@ export const requestDataFailure = (error) => ({
   payload: error,
 });
 
+export function fetchData(query){
+  return (dispatch) => {
+    dispatch(requestDataLoading());
+    return axios({
+      url: 'http://localhost:3000/results',
+      params: {
+        city: query
+      },
+      method: 'GET'
+    }).then( (response) => {
+      dispatch(requestDataSuccess(response.data));
+    }).catch((error) => {
+      dispatch(requestDataFailure(error)); 
+    });
+  };
+}
+
 
 // single Property
 export const requestSinglePropertyLoading = () => ({
