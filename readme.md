@@ -57,3 +57,6 @@ Reducers:
 - reducer 1
 - reducer 2
 
+
+## post vs get 
+- Is it possible to 'get' data using POST with json-server? #453: https://github.com/typicode/json-server/issues/453
