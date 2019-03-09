@@ -1,3 +1,28 @@
+@import 'src/styles/abstracts/functions/_get-color';
 .single {
-  padding: 12px;
+  .single__container {
+    background: getColor(white);
+    box-shadow: 1px 2px 5px 2px getColor(black-10);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .single__address {
+    color: getColor(black-60);
+    padding: 1rem;
+  }
+  .single__description {
+    color: getColor(black-60);
+    padding: 1rem;
+    max-width: 600px;
+  }
+  .single__image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid getColor(silver);
+  }
 }

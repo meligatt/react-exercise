@@ -1,3 +1,18 @@
+@import 'src/styles/abstracts/functions/_get-color';
 .list {
-  padding: 12px;
+  .list__title {
+    font-size: 1.5rem;
+    color: getColor(purple);
+    margin: 0 0 8px;
+    font-weight: 400;
+  }
+  .list__results {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .list__loading-message {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid getColor(orange);
+  }
 }

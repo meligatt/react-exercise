@@ -1,3 +1,33 @@
+@import 'src/styles/abstracts/functions/_get-color';
 .search-bar {
-  padding: 12px;
+  .search-bar__container {
+    padding: 1rem;
+  }
+  .search-bar__label {
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
+  }
+  .search-bar__input-text {
+    color: getColor(black-80);
+    border: 1px solid getColor(black-60);
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
+  }
+  .search-bar__button {
+    font-size: 1rem;
+    line-height: normal;
+    color: getColor(white);
+    background-color: #f9835b;
+    cursor: pointer;
+    border-radius: 1px;
+    border: none;
+    box-shadow: -1px 1px 20px rgba(255, 255, 255, 0.48);
+    margin-right: 0.2rem; //todo: add gutter varibale
+    margin-left: 0.2rem; //todo: add gutter varibale
+  }
+  .search-bar__warning {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid getColor(orange);
+  }
 }

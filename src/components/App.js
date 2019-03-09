@@ -10,9 +10,9 @@ class App extends Component {
   render(){
     return(
       <Router>
-        <div className="app-view">
+        <div className="app-view__container">
           <Nav />
-          <main id="main" role="main">
+          <main role="main">
             <Route exact path="/" component={ ListContainer } />
             <Route path="/:id" component={ SingleContainer } />
           </main>

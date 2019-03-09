@@ -18,14 +18,13 @@ Client: application with react routes.
   - search view results: show a list of property results.
   - list item view: when clicking on an item of the results, or when hit directly in the url: `http://localhost:8080/:query` ie. `http://localhost:8080/86m8km`
 
-- [x] install redux
-  - add basic action + reducer to test implementation
-
 - [X] React components:
   - search bar
   - form elements (search input, search button)
   - results list
   - list item
+  - nav
+  - footer
 
 - [x] Accessibility Resources:
   - [x] tab focus with logical order: page is navigable via keyboard.
@@ -36,15 +35,17 @@ Client: application with react routes.
   - Actions: async, sync.
   - Reducers
 
+- [x] Add Styles:
+  - Add SASS mixins: WIP
+  - Add SASS MAPS
+  - Add responsive features
+
 ## Work in Progress:
 
 - [ ] run jest: WIP
   - add unit test to components
 
-- [ ] Add Styles: WIP
-  - Add SASS mixins
-  - Add SASS MAPS
-  - Add responsive features
+- [ ] optimize image loading: WIP
 
 
 ## post vs get 

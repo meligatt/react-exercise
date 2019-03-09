@@ -1,19 +1,24 @@
 import './List.scss';
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import ListItem from './ListItem';
 
 const List = ({items, isFetching}) => {
   return (
     <section className="list">
-      { isFetching && <div>Loading results...</div> }
+      { isFetching && <div className="list__loading-message">Loading results...</div> }
       
       { !isFetching && items.length > 0 && 
-        <div role="list">
-          {
-            items.map( item => <ListItem key={item.listingId} item={item}/>)
-          }
-        </div>
+        <Fragment>
+          <div className="list__title">
+            Results:
+          </div>
+          <div role="list" className="list__results">
+            {
+              items.map( item => <ListItem key={item.listingId} item={item}/>)
+            }
+          </div>
+        </Fragment>
       }
     </section>
   );};

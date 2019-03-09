@@ -1,3 +1,43 @@
+@import 'src/styles/abstracts/functions/_get-color';
 .nav {
-  padding: 12px;
+  .nav__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    background: getColor(white);
+    box-shadow: 0 2px 3px 0 getColor(blackShadow);
+    padding: 0 20px;
+  }
+  .nav__logo {
+    display: inline-block;
+    border: 2px solid getColor(purple);
+    font-size: 1.5rem;
+    color: getColor(purple);
+    text-decoration: none;
+    padding: 0.5rem;
+  }
+  .nav__menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 20%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .nav__item {
+    flex: 1 0 calc(25% - 10px);
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+    a {
+      color: getColor(capeCod);
+      text-transform: none;
+      letter-spacing: normal;
+      transition: color .2s ease-in;
+      &:hover {
+        color: getColor(purple);
+      }
+    }
+  }
 }
