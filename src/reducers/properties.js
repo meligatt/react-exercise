@@ -14,7 +14,6 @@ const properties = (state = initialState, action) => {
   case 'REQUEST_DATA_FAILURE':
     return Object.assign({}, state, {
       error: action.error,
-      isFailure: true
     });
   default:
     return state;

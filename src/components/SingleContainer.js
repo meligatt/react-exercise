@@ -1,14 +1,17 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
-import Single from './Single';
+import React, { Component } from 'react';
+// import Single from './Single';
 import { connect } from 'react-redux';
 
-const SingleContainer = ({match, items}) => {
-  const itemIndex = items.findIndex( item =>  item.listingId === match.params.id);
-  return (
-    <Single id={match.params.id} item={items[itemIndex]}/>
-  );
-};
+class SingleContainer extends Component {
+  render(){
+    // items[itemIndex]
+    return (
+      // <Single id={this.props.match.params.id} item={}/>
+      <div>SingleContainer</div>
+    );
+  }
+}
 
 const mapStateToProps = state => ({
   items: state.properties.items
