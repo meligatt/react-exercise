@@ -1,62 +1,56 @@
 # to start:
--  to install json-server: `yarn global add json-server`
--  to start json-server:  
-  - from root folder: `cd data`
-  - `json-server db.json`
-
+- to install json-server: `yarn global add json-server`
+- to start json-server: from root folder: `cd data` and run `json-server db.json`
 - to install dependencies: run `yarn`
--  to start webpack-dev-server: `yarn start`
-- go to `http://localhost:8080/`
+- to start webpack-dev-server: `yarn start`
+- go to `http://localhost:8080/` and search by `melbourne`. For now there is only one city in the api.
 
-
-# to-do:
-
-Backend:
-- [ ] Use postman to get data from API endpoints
-- [ ] spin up a JSON Server (https://github.com/typicode/json-server) with responses from API for:
+## To do:
+API (mocked for demo purposes):
+- [x] Use postman to get data from API endpoints
+- [x] spin up a JSON Server (https://github.com/typicode/json-server) with responses from API for:
   - POST request
   - GET request
 
-Client: single page application
-- [ ] app will have 3 views
-  - search view with no results (empty state)
-  - search view results 
-  - list item view
+Client: application with react routes.
+- [x] app will have 3 views
+  - search view with no results: when hit `http://localhost:8080/`
+  - search view results: show a list of property results.
+  - list item view: when clicking on an item of the results, or when hit directly in the url: `http://localhost:8080/:query` ie. `http://localhost:8080/86m8km`
 
-- [ ] install redux
+- [x] install redux
   - add basic action + reducer to test implementation
 
-- [ ] run jest
-  - add unit test to components
-
-- [ ] React components:
-https://overreacted.io/how-are-function-components-different-from-classes/
+- [X] React components:
   - search bar
   - form elements (search input, search button)
   - results list
   - list item
 
-- Accessibility (https://reactjs.org/docs/accessibility.html)
-  - AIM 
-  - https://webaim.org/techniques/screenreader/
-  - https://accessibility.18f.gov/
-  - https://bitsofco.de/the-accessibility-cheatsheet/
-  - https://styleguide.mailchimp.com/web-elements/#header-3-headings-and-subheadings
-  - semantic HTML (use the correct html tags)
-  - check https://www.w3.org/TR/wai-aria-practices/#accordion for recommendation on a11y for widgets
-  - check the examples provided by w3c-wai before coding https://www.w3.org/TR/wai-aria-practices/examples/accordion/accordion.html
-  - tab focus with logical order.
-  - aria-* HTML attributes
+- [x] Accessibility Resources:
+  - [x] tab focus with logical order: page is navigable via keyboard.
+  - [x] aria-* HTML attributes: screen reader (voiceOver mac os) announce content.
+  - [x] semantic HTML (use the correct html tags)
+  
+- [x] Implement Redux
+  - Actions: async, sync.
+  - Reducers
 
-- [ ] Implement Redux
-Actions:
-- action 1
-- action 2
+## Work in Progress:
 
-Reducers:
-- reducer 1
-- reducer 2
+- [ ] run jest: WIP
+  - add unit test to components
+
+- [ ] Add Styles: WIP
+  - Add SASS mixins
+  - Add SASS MAPS
+  - Add responsive features
 
 
 ## post vs get 
 - Is it possible to 'get' data using POST with json-server? #453: https://github.com/typicode/json-server/issues/453
+
+## Resources:
+- https://reactjs.org/docs/accessibility.html
+- https://webaim.org/techniques/screenreader/
+- check https://www.w3.org/TR/wai-aria-practices/#accordion (widgets)
