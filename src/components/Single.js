@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Single = ({ id }) => (
+const Single = ({ item }) => (
   <div>
-    Single view
-    <h3>ID: {id}</h3>
+    Single view:
+    <p>{item.description}</p>
+    <p>{item.listPrice}</p>
   </div>
 );
  
 Single.propTypes = {
-  id: PropTypes.string
+  item: PropTypes.object
 };
 
 export default Single;
