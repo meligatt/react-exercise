@@ -44,7 +44,7 @@ class ListContainer extends Component {
   
   render(){
     const { warning } = this.state;
-    const { items, isFetching } = this.props.properties;
+    const { items, isFetching } = this.props;
     return(
       <div>
         <div style={{padding:'8px'}}>
@@ -58,7 +58,8 @@ class ListContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  properties: state.properties
+  items: state.properties.items,
+  isFetching: state.properties.isFetching
 });
 
 const mapDispatchToProps = dispatch => (

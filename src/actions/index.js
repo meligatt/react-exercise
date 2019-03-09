@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 // properties
 export const requestDataLoading = () => ({
   type: 'REQUEST_DATA_LOADING',
@@ -32,6 +34,19 @@ export const requestSinglePropertyFailure = (error) => ({
 });
 
 export function fetchSingleProperty(id){
-  console.log('fetchSingleProperty');
-  
+  return (dispatch) => {
+    dispatch(requestSinglePropertyLoading());
+    return axios({
+      url: 'http://localhost:3000/results',
+      params: {
+        listingId: id
+      },
+      method: 'GET'
+    }).then( (response) => {
+      dispatch(requestSinglePropertySuccess(response.data[0]));
+    }).catch((error) => {
+      dispatch(requestSinglePropertyFailure(error)); 
+    });
+  };
+
 }

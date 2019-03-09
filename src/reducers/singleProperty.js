@@ -1,15 +1,15 @@
-const properties = (state = {}, action) => {
+const singleProperty = (state={}, action) => {
   switch (action.type) {
-  case 'REQUEST_DATA_LOADING':
+  case 'REQUEST_SINGLE_PROPERTY_LOADING':
     return Object.assign({}, state, {
       isFetching: true
     });
-  case 'REQUEST_DATA_SUCCESS':
+  case 'REQUEST_SINGLE_PROPERTY_SUCCESS':
     return Object.assign({}, state, {
-      items: action.payload,
+      item: action.payload,
       isFetching: false
     });
-  case 'REQUEST_DATA_FAILURE':
+  case 'REQUEST_SINGLE_PROPERTY_FAILURE':
     return Object.assign({}, state, {
       error: action.error,
     });
@@ -17,4 +17,4 @@ const properties = (state = {}, action) => {
     return state;
   }  
 };
-export default properties;
+export default singleProperty;

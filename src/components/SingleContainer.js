@@ -1,23 +1,36 @@
 /* eslint-disable react/prop-types */
 import React, { Component } from 'react';
-// import Single from './Single';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { fetchSingleProperty } from '../actions';
+import Single from './Single';
 
 class SingleContainer extends Component {
+  componentDidMount(){
+    const id = this.props.match.params.id;
+    this.props.fetchSingleProperty(id);
+  }
   render(){
-    // items[itemIndex]
+    const { item } = this.props;
+    console.log(item);
+    
     return (
-      // <Single id={this.props.match.params.id} item={}/>
-      <div>SingleContainer</div>
+      <Single item={ item }/>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  items: state.properties.items
+  item: state.singleProperty.item
 });
+
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({
+    fetchSingleProperty,
+  }, dispatch)
+);
 
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(SingleContainer);
