@@ -1,16 +1,17 @@
+import './Nav.scss';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const MainNav = () => {
+const Nav = () => {
   return(
-    <nav className="main-nav">
-      <div className="main-nav__container">
-        <Link className="main-nav__logo" to="/"> Search Properties </Link>
-        <ul className="main-nav__menu">
-          <li className="main-nav__item">
+    <nav className="nav">
+      <div className="nav__container">
+        <Link className="nav__logo" to="/"> Search Properties </Link>
+        <ul className="nav__menu">
+          <li className="nav__item">
             <Link to="/">Home</Link>
           </li>
-          <li className="main-nav__item">
+          <li className="nav__item">
             <a href="https://github.com/meligatt/react-exercise">About</a>
           </li>
         </ul>
@@ -18,4 +19,4 @@ const MainNav = () => {
     </nav>
   );};
 
-export default MainNav;
+export default Nav;

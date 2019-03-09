@@ -1,4 +1,4 @@
-import './index.scss';
+import './App.scss';
 import React, { Component } from 'react';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import Nav from './Nav';
