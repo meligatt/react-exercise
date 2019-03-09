@@ -22,7 +22,7 @@ const List = ({items, isFetching}) => {
 
 List.propTypes = {
   items: PropTypes.array.isRequired,
-  isFetching:PropTypes.boolean.isRequired
+  isFetching:PropTypes.bool
 };
 
 export default List;

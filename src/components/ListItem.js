@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const ListItem = ({ item }) =>(
   <li>
     {item.description}
-    <Link to={`/item/${ item.listingId }`}>
+    <Link to={`/${ item.listingId }`}>
       [review property]
     </Link>
   </li> 

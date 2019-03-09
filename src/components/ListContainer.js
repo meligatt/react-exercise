@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { requestDataLoading, requestDataSuccess, requestDataFailure } from '../actions';
 import axios from 'axios';
 import List from './List';
+import { withRouter } from 'react-router-dom';
 // import SearchBar from './SearchBar';
 
 class ListContainer extends Component {
@@ -70,7 +71,7 @@ const mapDispatchToProps = dispatch => (
   }, dispatch)
 );
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(ListContainer);
+)(ListContainer));
