@@ -6,6 +6,7 @@ const List = ({items, isFetching}) => {
   return (
     <section>
       { isFetching && <div>Loading results...</div> }
+      
       { !isFetching && items.length > 0 && 
         <div role="list">
           {
@@ -13,12 +14,11 @@ const List = ({items, isFetching}) => {
           }
         </div>
       }
-      { !isFetching && items.length === 0 && <div>No results found...</div> }
     </section>
   );};
 
 List.propTypes = {
-  items: PropTypes.array.isRequired,
+  items: PropTypes.array,
   isFetching:PropTypes.bool
 };
 
