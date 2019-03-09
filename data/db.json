@@ -14,8 +14,9 @@
       "postcode": "11804",
       "images": [
         {
-          "title": "",
-          "small": "https://images-prod-us.azureedge.net/390/232/d56b2c43-75a1-4aed-a7a8-bd3a9c58d510.jpg"
+          "title": "Two floor house, walls light yellow color with garage",
+          "small": "https://images-prod-us.azureedge.net/390/232/84c6df0a-2120-406a-b560-e29917b99190.jpg",
+          "medium": "https://images-prod-us.azureedge.net/655/450/84c6df0a-2120-406a-b560-e29917b99190.jpg"
         }
       ]
     },
@@ -33,7 +34,7 @@
       "postcode": "11804",
       "images": [
         {
-          "title": "",
+          "title": "One floor house, walls yellow color with garage",
           "small": "https://images-prod-us.azureedge.net/390/232/9ce40462-c9f4-4ff0-b173-65a85abd31a9.jpg"
         }
       ]

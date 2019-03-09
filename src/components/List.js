@@ -7,11 +7,11 @@ const List = ({items, isFetching}) => {
     <section>
       { isFetching && <div>Loading results...</div> }
       { !isFetching && items.length > 0 && 
-        <ul>
+        <div role="list">
           {
             items.map( item => <ListItem key={item.listingId} item={item}/>)
           }
-        </ul>
+        </div>
       }
       { !isFetching && items.length === 0 && <div>No results found...</div> }
     </section>
