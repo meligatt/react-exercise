@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import {Route, BrowserRouter as Router } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-
+import {Route, BrowserRouter as Router, Link } from 'react-router-dom';
 import ListContainer from './ListContainer';
 import SingleContainer from './SingleContainer';
 
@@ -14,7 +12,7 @@ class App extends Component {
           <div>
             <Link to="/">Search Properties </Link>
             <Route exact path="/" component = { ListContainer } />
-            <Route  path="/item/:id" component = { SingleContainer } />
+            <Route  path="/:id" component = { SingleContainer } />
           </div>
         </Router>
       </div>

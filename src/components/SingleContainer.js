@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { fetchSingleProperty } from '../actions';
 import Single from './Single';
+import { withRouter } from 'react-router-dom';
 
 class SingleContainer extends Component {
   componentDidMount(){
@@ -28,7 +29,7 @@ const mapDispatchToProps = dispatch => (
   }, dispatch)
 );
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(SingleContainer);
+)(SingleContainer));
