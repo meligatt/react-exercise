@@ -1,3 +1,4 @@
+// reducers: properties
 const properties = (state = {}, action) => {
   switch (action.type) {
   case 'REQUEST_DATA_LOADING':

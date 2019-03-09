@@ -3,8 +3,7 @@ import React, { Component, Fragment} from 'react';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { requestDataLoading, requestDataSuccess, requestDataFailure } from '../actions';
-import axios from 'axios';
+import { fetchData } from '../actions';
 import List from './List';
 import { withRouter } from 'react-router-dom';
 import SearchBar from './SearchBar';
@@ -23,20 +22,11 @@ class ListContainer extends Component {
       if (this.state.query === null ) { 
         this.setState({hasWarning: true}); 
         return; 
-      }
-      this.props.requestDataLoading();
-      axios({
-        url: 'http://localhost:3000/results',
-        params: {
-          city: this.state.query
-        },
-        method: 'GET'
-      }).then( (response) => {
-        this.props.requestDataSuccess(response.data);
-        this.setState({hasWarning: false});
-      }).catch((error) => {
-        this.props.requestDataFailure(error); 
-      });
+      }     
+      this.props.fetchData(this.state.query)
+        .then(() => {
+          this.setState({hasWarning: false});
+        });
     };
   }
 
@@ -69,9 +59,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => (
   bindActionCreators({
-    requestDataLoading,
-    requestDataSuccess,
-    requestDataFailure
+    fetchData
   }, dispatch)
 );
 
