@@ -12,8 +12,6 @@ class SingleContainer extends Component {
   }
   render(){
     const { item } = this.props;
-    console.log(item);
-    
     return (
       <Single item={ item }/>
     );

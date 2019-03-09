@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import ListItem from './ListItem';
@@ -22,12 +21,8 @@ const List = ({items, isFetching}) => {
   );};
 
 List.propTypes = {
-  results: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-    }).isRequired
-  )
+  items: PropTypes.array.isRequired,
+  isFetching:PropTypes.boolean.isRequired
 };
 
 export default List;

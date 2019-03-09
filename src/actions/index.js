@@ -48,5 +48,4 @@ export function fetchSingleProperty(id){
       dispatch(requestSinglePropertyFailure(error)); 
     });
   };
-
 }
