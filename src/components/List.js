@@ -4,20 +4,17 @@ import ListItem from './ListItem';
 
 const List = ({items, isFetching}) => {
   return (
-    <div>
-      { isFetching && <div>is Fetching...</div> }
-    
+    <section>
+      { isFetching && <div>Loading results...</div> }
       { !isFetching && items.length > 0 && 
-      <ul>
-        { items.map(
-          (item) => <ListItem key={item.listingId}  item={item}/>
-        )
-        }
-      </ul>
+        <ul>
+          {
+            items.map( item => <ListItem key={item.listingId} item={item}/>)
+          }
+        </ul>
       }
-    
       { !isFetching && items.length === 0 && <div>No results found...</div> }
-    </div>
+    </section>
   );};
 
 List.propTypes = {

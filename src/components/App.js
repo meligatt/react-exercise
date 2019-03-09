@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
-import {Route, BrowserRouter as Router, Link } from 'react-router-dom';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
+import Nav from './Nav';
+import Footer from './Footer';
 import ListContainer from './ListContainer';
 import SingleContainer from './SingleContainer';
 
 class App extends Component {
-  
   render(){
     return(
-      <div>
-        <Router>
-          <div>
-            <Link to="/">Search Properties </Link>
-            <Route exact path="/" component = { ListContainer } />
-            <Route  path="/:id" component = { SingleContainer } />
-          </div>
-        </Router>
-      </div>
+      <Router>
+        <div className="app-view">
+          <Nav />
+          <main id="main" role="main">
+            <Route exact path="/" component={ ListContainer } />
+            <Route path="/:id" component={ SingleContainer } />
+          </main>
+          <Footer />
+        </div>
+      </Router>
     );
   }
 }
 export default App;
+
