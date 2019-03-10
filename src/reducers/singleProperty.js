@@ -1,6 +1,6 @@
 // reducers: singleProperty
 const singleProperty = (state={}, action) => {
-  switch (action.type) {
+  switch (action.type){
   case 'REQUEST_SINGLE_PROPERTY_LOADING':
     return Object.assign({}, state, {
       isFetching: true

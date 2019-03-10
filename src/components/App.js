@@ -6,15 +6,15 @@ import Footer from './Footer';
 import ListContainer from './ListContainer';
 import SingleContainer from './SingleContainer';
 
-class App extends Component {
-  render(){
+class App extends Component{
+  render() {
     return(
       <Router>
-        <div className="app-view__container">
+        <div className = "app-view__container">
           <Nav />
-          <main role="main">
-            <Route exact path="/" component={ ListContainer } />
-            <Route path="/:id" component={ SingleContainer } />
+          <main role = "main">
+            <Route exact path = "/" component = { ListContainer } />
+            <Route path = "/:id" component = { SingleContainer } />
           </main>
           <Footer />
         </div>

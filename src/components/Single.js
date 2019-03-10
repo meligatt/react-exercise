@@ -8,12 +8,12 @@ const Single = ({ item, image }) => {
   const descriptionLabel = `Description: ${item.description}`;
   
   return(
-    <div role="region" className="single">
-      <div className="single__container">
-        <h1 aria-label={ priceLabel }>{ priceLabel }</h1>      
-        <img className="single__image" src={image.medium} alt={image.title} />
-        <div className="single__address" aria-label={ fullAddressLabel }>{ fullAddressLabel }</div>
-        <p className="single__description" aria-label={ descriptionLabel }>
+    <div role = "region" className = "single">
+      <div className = "single__container">
+        <h1 aria-label = { priceLabel }>{ priceLabel }</h1>      
+        <img className = "single__image" src = { image.medium } alt = { image.title } />
+        <div className = "single__address" aria-label = { fullAddressLabel }>{ fullAddressLabel }</div>
+        <p className = "single__description" aria-label = { descriptionLabel }>
           { item.description }
         </p>
       </div>

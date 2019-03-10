@@ -16,7 +16,7 @@ export const requestDataFailure = (error) => ({
   payload: error,
 });
 
-export function fetchData(query){
+export function fetchData(query) {
   return (dispatch) => {
     dispatch(requestDataLoading());
     return axios({
@@ -50,7 +50,7 @@ export const requestSinglePropertyFailure = (error) => ({
   payload: error,
 });
 
-export function fetchSingleProperty(id){
+export function fetchSingleProperty(id) {
   return (dispatch) => {
     dispatch(requestSinglePropertyLoading());
     return axios({

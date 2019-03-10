@@ -6,17 +6,17 @@ import { fetchSingleProperty } from '../actions';
 import Single from './Single';
 import { withRouter } from 'react-router-dom';
 
-class SingleContainer extends Component {
-  componentDidMount(){
+class SingleContainer extends Component{
+  componentDidMount() {
     const id = this.props.match.params.id;
     this.props.fetchSingleProperty(id);
   }
-  render(){
+  render() {
     const { item, image, isFetching } = this.props;
     return (
       <Fragment>
         { isFetching && <div>Loading data...</div> }
-        { !isFetching && image && <Single item={ item } image={ image }/> } 
+        { !isFetching && image && <Single item = { item } image = { image }/> } 
       </Fragment>
     );
   }
