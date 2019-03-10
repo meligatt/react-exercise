@@ -40,10 +40,26 @@ Client: application with react routes.
   - Add SASS MAPS
   - Add responsive features
 
-## Work in Progress:
+## Work in Progress!!:
 
 - [ ] run jest: WIP
   - add unit test to components
+  - Examples of test that I have written in other projects
+  
+  - hotels project test 2018:
+  1. testing callbacks: https://github.com/meligatt/hotels-projects-2018/blob/master/public/javascripts/components/FilterBar/__tests__/index.js
+  2. https://github.com/meligatt/hotels-projects-2018/blob/master/public/javascripts/components/HotelList/__tests__/index.js
+  
+  - surveys project tests 2018:
+  1. https://github.com/meligatt/surveys-project-2018/tree/master/src/lib/requests
+  2. https://github.com/meligatt/surveys-project-2018/tree/master/src/lib/helpers
+  3. https://github.com/meligatt/surveys-project-2018/blob/master/src/components/survey-results/__tests__/index.js
+  
+  - Side project 2019:
+  1. https://github.com/cfranklin11/tipresias/blob/master/frontend/src/services/fetchPredictions/__tests__/index.js
+  2. https://github.com/cfranklin11/tipresias/blob/master/frontend/src/components/Select/__tests__/index.js
+  3. https://github.com/cfranklin11/tipresias/blob/master/frontend/src/components/BarChart/__tests__/index.js
+
 
 - [ ] optimize image loading: WIP
 
