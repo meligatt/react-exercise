@@ -9,7 +9,8 @@ function configureStore(){
     properties: {
       isFetching: false,
       error: null,
-      items: []
+      items: [],
+      isASC: true
     },
     singleProperty: {
       isFetching: false,

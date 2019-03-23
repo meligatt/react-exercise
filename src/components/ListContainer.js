@@ -3,7 +3,7 @@ import React, { Component, Fragment} from 'react';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { fetchData } from '../actions';
+import { fetchData, toggleData } from '../actions';
 import List from './List';
 import { withRouter } from 'react-router-dom';
 import SearchBar from './SearchBar';
@@ -36,7 +36,7 @@ class ListContainer extends Component {
   
   render(){
     const { hasWarning } = this.state;
-    const { items, isFetching } = this.props;
+    const { items, isFetching, toggleData, isASC } = this.props;
     return(
       <Fragment>
         <SearchBar 
@@ -45,7 +45,7 @@ class ListContainer extends Component {
           hasWarning={ hasWarning }
         />
         <div role="region" aria-live="polite" aria-label="results">
-          <List items={ items } isFetching={ isFetching } />
+          <List items={ items } isFetching={ isFetching } toggleData ={ toggleData } isASC={ isASC }/>
         </div>        
       </Fragment>
     );
@@ -54,12 +54,14 @@ class ListContainer extends Component {
 
 const mapStateToProps = state => ({
   items: state.properties.items,
-  isFetching: state.properties.isFetching
+  isFetching: state.properties.isFetching,
+  isASC: state.properties.isASC
 });
 
 const mapDispatchToProps = dispatch => (
   bindActionCreators({
-    fetchData
+    fetchData,
+    toggleData
   }, dispatch)
 );
 
