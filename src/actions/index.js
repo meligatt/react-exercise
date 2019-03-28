@@ -1,4 +1,12 @@
 import axios from 'axios';
+// const
+const TOGGLE_DATA = 'TOGGLE_DATA';
+
+export const toggleData = () => {
+  return {
+    type: TOGGLE_DATA,
+  };
+};
 
 // properties
 export const requestDataLoading = () => ({
