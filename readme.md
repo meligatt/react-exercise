@@ -65,6 +65,9 @@ Client: application with react routes.
 - [ ] optimize image loading: WIP
 
 - [ ] Add debounce techniques to avoid several clicks on sort toggle button.
+- [ ] add sort mode when success data
+- [ ] add redux logger
+
 
 ## post vs get 
 - Is it possible to 'get' data using POST with json-server? #453: https://github.com/typicode/json-server/issues/453
