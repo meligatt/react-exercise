@@ -40,6 +40,7 @@ Client: application with react routes.
   - Add SASS MAPS
   - Add responsive features
 
+
 ## Work in Progress!!:
 
 - [ ] run jest: WIP
@@ -63,11 +64,15 @@ Client: application with react routes.
 
 - [ ] optimize image loading: WIP
 
+- [ ] Add debounce techniques to avoid several clicks on sort toggle button.
 
 ## post vs get 
 - Is it possible to 'get' data using POST with json-server? #453: https://github.com/typicode/json-server/issues/453
 
 ## Resources:
+
 - https://reactjs.org/docs/accessibility.html
 - https://webaim.org/techniques/screenreader/
 - check https://www.w3.org/TR/wai-aria-practices/#accordion (widgets)
+- https://css-tricks.com/debouncing-throttling-explained-examples/
+- https://lodash.com/docs/4.17.11#debounce
