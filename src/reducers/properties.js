@@ -1,5 +1,5 @@
 const sortItems = (items, isASC) => {
-  if (isASC) {
+  if (isASC){
   // asc
     return items.sort((itemA, itemB) => itemA.listPrice - itemB.listPrice); 
   }  
@@ -9,7 +9,7 @@ const sortItems = (items, isASC) => {
     
 // reducers: properties
 const properties = (state = {}, action) => {
-  switch (action.type) {
+  switch (action.type){
   case 'REQUEST_DATA_LOADING':{
     return Object.assign({}, state, {
       isFetching: true
