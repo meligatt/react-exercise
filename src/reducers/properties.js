@@ -1,6 +1,6 @@
 // reducers: properties
 const properties = (state = {}, action) => {
-  switch (action.type) {
+  switch (action.type){
   case 'REQUEST_DATA_LOADING':
     return Object.assign({}, state, {
       isFetching: true

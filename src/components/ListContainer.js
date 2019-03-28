@@ -8,8 +8,8 @@ import List from './List';
 import { withRouter } from 'react-router-dom';
 import SearchBar from './SearchBar';
 
-class ListContainer extends Component {
-  constructor(){
+class ListContainer extends Component{
+  constructor() {
     super();
     this.state = {
       query: null,
@@ -17,9 +17,9 @@ class ListContainer extends Component {
     };
   }
 
-  onButtonClick(){
+  onButtonClick() {
     return () => {
-      if (this.state.query === null ) { 
+      if (this.state.query === null ){ 
         this.setState({hasWarning: true}); 
         return; 
       }     
@@ -30,22 +30,22 @@ class ListContainer extends Component {
     };
   }
 
-  onInputChange(value){
+  onInputChange(value) {
     this.setState({query: value});
   }
   
-  render(){
+  render() {
     const { hasWarning } = this.state;
     const { items, isFetching } = this.props;
     return(
       <Fragment>
         <SearchBar 
-          onInputChange={ (e) => this.onInputChange(e.target.value) }
-          onButtonClick={ () => this.onButtonClick() }
-          hasWarning={ hasWarning }
+          onInputChange = { (e) => this.onInputChange(e.target.value) }
+          onButtonClick = { () => this.onButtonClick() }
+          hasWarning = { hasWarning }
         />
-        <div role="region" aria-live="polite" aria-label="results">
-          <List items={ items } isFetching={ isFetching } />
+        <div role = "region" aria-live = "polite" aria-label = "results">
+          <List items = { items } isFetching = { isFetching } />
         </div>        
       </Fragment>
     );
